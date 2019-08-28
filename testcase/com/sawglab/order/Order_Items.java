@@ -49,13 +49,18 @@ public class Order_Items extends abtractTest{
 		verifyTrue(productPage.isProductNameDisplayed("Sauce Labs Bike Light", "Sauce Labs Bike Light"));
 		
 		productPage.clickToCheckoutButton();
+		verifyTrue(productPage.isSubheaderCheckoutDisplayed("Checkout: Your Information"));
+		
 		productPage.senkeydToCheckoutTextbox("first-name", "Le Duc");
 		productPage.senkeydToCheckoutTextbox("last-name", "Tuyen");
 		productPage.senkeydToCheckoutTextbox("postal-code", "777777");
 		
 		productPage.clickToContinueButton();
+		verifyTrue(productPage.isSubheaderOverviewDisplayed("Checkout: Overview"));
+		
 		productPage.clickToFinishButton();
 		
+		verifyTrue(productPage.isSubheaderFinishDisplayed("Finish"));
 		verifyTrue(productPage.isMessageOrderSuccessfullyDisplayed("THANK YOU FOR YOUR ORDER"));
 	}
 
