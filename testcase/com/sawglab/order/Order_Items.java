@@ -35,8 +35,8 @@ public class Order_Items extends abtractTest{
 		verifyTrue(productPage.isLogoSwagLabDisplayed());
 		verifyTrue(productPage.isSubHeaderProductDisplayed("Products"));
 		
-		priceProduct01 = productPage.getProductPrize("Sauce Labs Backpack","29.99");
-		priceProduct02 = productPage.getProductPrize("Sauce Labs Bike Light","9.99");
+		//priceProduct01 = productPage.getProductPrize("Sauce Labs Backpack","29.99");
+		//priceProduct02 = productPage.getProductPrize("Sauce Labs Bike Light","9.99");
 	}
 	
 	@Test
@@ -45,7 +45,6 @@ public class Order_Items extends abtractTest{
 		productPage.clicktoButtonAddToCart("Sauce Labs Bike Light");
 		productPage.clickToShoppingCartIcon();
 		
-		//verify name and prize
 		verifyTrue(productPage.isProductNameDisplayed("Sauce Labs Backpack", "Sauce Labs Backpack"));
 		verifyTrue(productPage.isProductNameDisplayed("Sauce Labs Bike Light", "Sauce Labs Bike Light"));
 		
